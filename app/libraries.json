@@ -1,0 +1,15 @@
+[
+  {
+    "artifactId": "documentfile",
+    "excludes": [],
+    "groupId": "androidx.documentfile",
+    "versionName": "1.0.0"
+  },
+  {
+    "artifactId": "commons-io",
+    "excludes": [],
+    "groupId": "commons-io",
+    "scope": "compile",
+    "versionName": "2.13.0"
+  }
+]

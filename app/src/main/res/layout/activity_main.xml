@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Загрузить файл" />
+
+        <Button
+            android:id="@+id/OutputDirButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать путь\nвывода" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonToZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертировать" />
+
+    <EditText
+        android:id="@+id/PharInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Путь до .phar "
+        android:maxLines="3" />
+
+    <EditText
+        android:id="@+id/OutputInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Выходной путь "
+        android:maxLines="3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="horizontal" >
+
+        <TextView
+            android:id="@+id/LogText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:longClickable="true"
+            android:text=""
+            android:textIsSelectable="true"
+            android:visibility="gone" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ShowLogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Открыть лог" />
+
+        <Button
+            android:id="@+id/LogCopyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Копировать лог"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
