@@ -4,7 +4,7 @@
   "libraries": "[{\"declaration\":\"org.apache.commons:commons-lang3:3.12.0\",\"sourceFile\":\"/storage/emulated/0/Android/data/com.tyron.code/files/cache/maven/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar\"},{\"declaration\":\"org.apache.commons:commons-text:1.10.0\",\"sourceFile\":\"/storage/emulated/0/Android/data/com.tyron.code/files/cache/maven/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar\"},{\"declaration\":\"androidx.annotation:annotation:1.0.2\",\"sourceFile\":\"/storage/emulated/0/Android/data/com.tyron.code/files/cache/google-maven/androidx/annotation/annotation/1.0.2/annotation-1.0.2.jar\"},{\"declaration\":\"androidx.documentfile:documentfile:1.0.1\",\"sourceFile\":\"/storage/emulated/0/Android/data/com.tyron.code/files/cache/google-maven/androidx/documentfile/documentfile/1.0.1/documentfile-1.0.1.aar\"},{\"declaration\":\"commons-io:commons-io:2.16.1\",\"sourceFile\":\"/storage/emulated/0/Android/data/com.tyron.code/files/cache/maven/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar\"}]",
   "useR8": true,
   "targetSdkVersion": 30.0,
-  "versionName": "1.1",
-  "versionCode": 1.1,
+  "versionName": "1.2",
+  "versionCode": 1.2,
   "zipAlignEnabled": true
 }
