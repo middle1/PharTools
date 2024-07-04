@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.transition.Visibility;
 import android.view.View;
@@ -70,7 +71,7 @@ public class Manager {
 
 			break;
 		case "dir":
-		setStatusText("В процессе...");
+			setStatusText("В процессе...");
 			Runnable runnable2 = new Runnable() {
 				@Override
 				public void run() {
@@ -153,5 +154,24 @@ public class Manager {
 		}
 		String res = output.toString();
 		return res;
+	}
+
+	public String getSharedPreferences(String StringName) {
+		SharedPreferences preferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
+		String res = preferences.getString(StringName, "");
+		return res;
+	}
+
+	public void setSharedPreferences(String paramName, String data) {
+		SharedPreferences preferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = preferences.edit();
+		editor.putString(paramName,  data);
+		editor.apply();
+	}
+	public void unsetSharedPreferences(String StringName){
+		SharedPreferences preferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = preferences.edit();
+		editor.remove(StringName);
+		editor.apply();
 	}
 }
