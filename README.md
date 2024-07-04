@@ -7,9 +7,9 @@ This application was created to simplify working with rar archives for Android.
 #### With this application, you can convert a folder to a phar archive and vice versa. This is my first application written in java (I wrote it on my phone and tested it there). I will try to support this app in the future!
 
 ### Future plans:
-- [+] Improve the code.
-- [+] Improve the transition between application tabs.
-- [+] Add a "Stub" change to the settings.
+- [X] Improve the code.
+- [X] Improve the transition between application tabs.
+- [X] Add a "Stub" change to the settings.
 - [ ] Save the log in a separate file.
 ### Feedback: 
 <a href="https://t.me/middle1221">
