@@ -54,8 +54,8 @@ public class FilesManager {
 
 	public void copyFileToSdCard(InputStream inputStream, String fileName) {
 		File sdCard = context.getExternalFilesDir(null);
-		File directory = new File(sdCard.getAbsolutePath()); // Путь к папке /sdcard
-		directory.mkdirs(); // Убедитесь, что папка существует
+		File directory = new File(sdCard.getAbsolutePath()); 
+		directory.mkdirs();
 
 		File outFile = new File(directory, fileName);
 		if (outFile.exists()) {
@@ -123,7 +123,7 @@ public class FilesManager {
 		File pathToData = context.getExternalFilesDir(null);
 		String LibPath = context.getApplicationContext().getApplicationInfo().nativeLibraryDir + "/libphp.so";
 		ProcessBuilder builder1 = new ProcessBuilder(new String[] { LibPath, "-c" + pathToData + "/php.ini",
-				pathToData + "/unPhar.php", pathPhar, outputDir });
+				pathToData.getAbsolutePath() /*"/data/media/0/Android/data/ru.middle1.phartools/files"*/ + "/unPhar.php", pathPhar, outputDir });
 		Map map = builder1.environment();
 		map.put("TMPDIR", pathToData + "/tmp");
 		try {
@@ -136,10 +136,13 @@ public class FilesManager {
 	}
 
 	public Process CreatePhar(String pathFolder, String outputDir) {
+		MainActivity activity = MainActivity.getInstance();
+		Manager manager = new Manager(context, activity);
+		String stub = manager.getSharedPreferences("stub");
 		File pathToDataApp = context.getExternalFilesDir(null);
 		String LibPath = context.getApplicationContext().getApplicationInfo().nativeLibraryDir + "/libphp.so";
 		ProcessBuilder builder1 = new ProcessBuilder(new String[] { LibPath, "-c" + pathToDataApp + "/php.ini",
-				pathToDataApp + "/toPhar.php", pathFolder, outputDir });
+				pathToDataApp /* "/data/media/0/Android/data/ru.middle1.phartools/files"*/+ "/toPhar.php", pathFolder, outputDir, stub });
 		Map map = builder1.environment();
 		map.put("TMPDIR", pathToDataApp + "/tmp");
 		try {
@@ -148,6 +151,6 @@ public class FilesManager {
 		} catch (Exception e) {
 			Toast.makeText(context, e.getMessage().toString(), Toast.LENGTH_LONG).show();
 		}
-		return null;
+		return null ;
 	}
 }
