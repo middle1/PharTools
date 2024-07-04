@@ -11,4 +11,14 @@
 	android:layout_height="wrap_content"
 	android:layout_width="wrap_content"
 	android:text="Версия приложения: "/>
+<EditText
+	android:id="@+id/stubLabel"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:hint="phar заглушка"/>
+<Button
+	android:id="@+id/SaveSettings"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:hint="Сохранить настройки"/>
 </LinearLayout>
