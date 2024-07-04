@@ -9,6 +9,7 @@ import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import org.apache.commons.lang3.StringUtils;
 
 public class ReadUriPaths {
 	public static String getPathFromURI(final Context context, final Uri uri) {
@@ -91,8 +92,12 @@ public class ReadUriPaths {
 	}
 
 	public static boolean isDownloadsDocument(Uri uri) {
-		return "com.android.providers.downloads.documents".equals(uri.getAuthority());
-	}
+    if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
+        final String id = DocumentsContract.getDocumentId(uri);
+        return StringUtils.isNumeric(id); // проверяем, что id является числом
+    }
+    return false;
+}
 
 	public static boolean isMediaDocument(Uri uri) {
 		return "com.android.providers.media.documents".equals(uri.getAuthority());
