@@ -3,20 +3,20 @@
     "artifactId": "documentfile",
     "excludes": [],
     "groupId": "androidx.documentfile",
-    "versionName": "1.0.0"
+    "versionName": "1.0.1"
   },
   {
     "artifactId": "commons-io",
     "excludes": [],
     "groupId": "commons-io",
     "scope": "compile",
-    "versionName": "2.13.0"
+    "versionName": "2.16.1"
   },
   {
     "artifactId": "commons-lang3",
     "excludes": [],
     "groupId": "org.apache.commons",
     "scope": "compile",
-    "versionName": "3.13.0"
+    "versionName": "3.14.0"
   }
 ]
