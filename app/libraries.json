@@ -11,5 +11,12 @@
     "groupId": "commons-io",
     "scope": "compile",
     "versionName": "2.13.0"
+  },
+  {
+    "artifactId": "commons-lang3",
+    "excludes": [],
+    "groupId": "org.apache.commons",
+    "scope": "compile",
+    "versionName": "3.13.0"
   }
 ]
